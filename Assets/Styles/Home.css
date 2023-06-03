@@ -12,6 +12,7 @@
 
 header{
   background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("Assets/gallery-images/Bus.jpg");
+  width: 100vh;
   height: 100vh;
   -webkit-background-size: cover; 
   background-size: cover;
