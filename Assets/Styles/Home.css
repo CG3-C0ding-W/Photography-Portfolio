@@ -11,12 +11,8 @@
   margin: auto;
 }
 
-.background-image{
-  background-image: url("Assets/gallery%20images/CTGStreet_MG_1764.jpg");
-}
-
 header{
-  background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6));
+  background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("Assets/gallery images/CTGStreet_MG_1764.jpg");
   height: 100vh;
   -webkit-background-size: cover; 
   background-size: cover;
