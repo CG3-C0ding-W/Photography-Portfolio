@@ -1,4 +1,4 @@
-<!--Home style-->
+<!--Home css style-->
 
 *{
   margin: 0;
@@ -11,9 +11,9 @@
 }
 
 header{
-  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("/Assets/gallery images/CTGStreet_MG_1764.jpg");
+  background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("Assets/gallery images/CTG Bus_MG_1777.jpg");
   height: 100vh;
-  -webkit-background-size: cover;
+  -webkit-background-size: cover; 
   background-size: cover;
   background-position: center center;
   position: relative;
@@ -34,7 +34,7 @@ header{
   text-decoration: none;
   padding: 5px 20px;
   font-family: poppins;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .nav-area li a:hover{
@@ -45,7 +45,7 @@ header{
 .logo img {}
 
 .welcome-text{
-  positon: absolute;
+  position: absolute;
   width: 600px;
   height: 300px;
   margin: 20% 30%;
@@ -72,5 +72,5 @@ header{
 
 .welcome-text a:hover{
   background: #fff;
-  color: #000;
+  color: #333;
 }

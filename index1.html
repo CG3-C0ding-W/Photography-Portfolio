@@ -1,200 +1,30 @@
+<!-- Home alone too -->
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <style>
-        * {
-            padding: 0;
-            margin: 0;
-        }
-
-        ul {
-            font-family: arial;
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            background-color: #1a1a1a;
-        }
-
-        li {
-            float: left;
-        }
-
-        li a {
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-        }
-
-        li a:hover {
-            background-color: #000000;
-        }
-
+  
+  <head>
+    <meta charset="UTF-8">
+    <title>G3VisualsPhotograhpy</title>
+    <link rel="stylesheet" href="Assets/Styles/Home.css">
+  </head>
+  
+  <body>
+    <header>
+      <div class="wrapper">
         
-        
-        #image {
-            float: right;
-            height: 90%;
-        }
-
-        h1 {
-            font-family: arial;
-            font-size: 20pt;
-            font-weight: lighter;
-        }
-
-        h1,
-        p {
-            color: white;
-            text-align: Center;
-        }
-
-        #cont {
-            padding: 125px;
-        }
-
-        .container {
-            max-width: 2400px;
-            width: 90%;
-            margin: auto;
-            padding: 20px 5px;
-        }
-
-        .title {
-            color: white;
-            margin-bottom: 2rem;
-            text-align: Center;
-            background-color: #1a1a1a;
-            top: 0;
-            width: 100%;
-            padding: 3px;
-            position: fixed;
-        }
-
-        .photo-gallery {
-            display: flex;
-            gap: 15px
-        }
-
-        .column {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        .photo img {
-            width: 100%;
-            height: 100%;
-            border-radius: 5px;
-            object-fit: cover;
-        }
-
-        @media(max-width: 768px) {
-            .photo-gallery {
-                flex-direction: column;
-            }
-        }
-
-        header {
-            background-color: #27374D;
-            top: 0;
-            width: 100%;
-            padding: 10px;
-            font-size: 30px;
-            
-        }
-
-        footer {
-            background-color: #27374D;
-            bottom: 0;
-            width: 100%;
-            padding: 3px;
-          
-        }
-    </style>
-</head>
-<header>
-    <p>G3 Visuals Photography</p>
-</header>
-
-<body style="background-color: #000000;">
-    <!--
-        <section>
-            <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">Gallery</a></li>
-                <li><a href="">About</a></li>
-                <li><a href="">Contact</a></li>
-            </ul>
-        </section>
-        
-        <section>
-            <div id="cont">
-                <h1>G3 Visuals Photography</h1>
-            </div>
-        </section>
-        -->
-    <section>
-        <div class="container">
-
-            <div class="photo-gallery">
-
-                <div class="column">
-                    <div class="photo">
-                        <img src="Assets/gallery images/Beach_MG_2832.jpg"
-                            alt="apple">
-                    </div>
-                    <div class="photo">
-                        <img src="Assets/gallery images/Engage_MG_1165.jpg"
-                            alt="">
-                    </div>
-                    <div class="photo">
-                        <img src="Assets/gallery images/LA_Skyline_MG_2667.jpg"
-                            alt="">
-                    </div>
-                </div>
-
-                <div class="column">
-                    <div class="photo">
-                        <img src="Assets/gallery images/LA_Skyline_MG_2737.jpg"
-                            alt="">
-                    </div>
-                    <div class="photo">
-                        <img src="Assets/gallery images/CTG_Pool_MG_2541.jpg"
-                            alt="">
-                    </div>
-                    <div class="photo">
-			<img src="Assets/gallery images/Car_MG_2575.jpg"
-                            alt="">
-                    </div>
-                </div>
-
-                <div class="column">
-                    <div class="photo">
-                        <img src="Assets/gallery images/Engage_MG_1014.jpg"
-                            alt="">
-                    </div>
-                    <div class="photo">
-			<img src="Assets/gallery images/PurpleHaze_MG_2783.jpg"
-                            alt="">
-                    </div>
-                    <div class="photo">
-                        <img src="Assets/gallery images/CTGStreet_MG_1764.jpg"
-                            alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <p>Copyright 2023 G3 Visuals. All Rights Reserved.</p>
-    </footer>
-</body>
-
+        <ul class="nav-area">
+          <li><a href="Home.html">Home</a><li>
+          <li><a href="#">About</a><li>
+          <li><a href="#">Gallery</a><li>
+          <li><a href="Contact.html">Contact</a><li>
+        </ul>
+      </div>
+      <div class="welcome-text">
+        <h1>Let's Shoot</h1>
+        <a href="Contact.html">Contact Us</a>
+      </div>
+    </header>
+  </body>
+  
 </html>
