@@ -21,9 +21,10 @@ header{
 }
 
 .nav-area{
-  float: right;
+  position: absolute;
+  right: 75px;
   list-style: none;
-  margin-top: 30px;
+  margin-top: 40px;
 }
 
 .nav-area li{
@@ -33,9 +34,10 @@ header{
 .nav-area li a{
   color: #fff;
   text-decoration: none;
-  padding: 5px 20px;
-  font-family: poppins;
+  padding: 10px 20px;
+  font-family: poppins italic;
   font-size: 16px;
+  text-transform: uppercase;
 }
 
 .nav-area li a:hover{
@@ -49,7 +51,9 @@ header{
   position: absolute;
   width: 600px;
   height: 300px;
-  margin: 20% 30%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
 }
 
@@ -61,12 +65,12 @@ header{
 }
 
 .welcome-text a{
-  border: 1px solid #fff;
+  border: 2px solid #fff;
   padding: 10px 25px;
   text-decoration: none;
   text-transform: uppercase;
   font-size: 14px;
-  margin: 20px;
+  margin: 5px;
   display: inline-block;
   color: #fff;
 }
