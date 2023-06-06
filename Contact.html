@@ -1,100 +1,143 @@
+<!-- Contact Html-->
+
 <!Doctype html>
 <html>
-  <head>
+
+<head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Form to Email Using Javascript</title>
     <link rel="stylesheet" href="contact.css">
     <style>
-      
-      *{
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: 'poppins','sans-serif';
-      }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'poppins', 'sans-serif';
+        }
 
-      .container{
-        width: 100%;
-        height: 100vh;
-        background: #001660;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      
-      .form{
-        background: #fff;
-        display: flex;
-        flex-direction: column;
-        padding: 2vw 4vw;
-        width: 90%;
-        max-width: 600px;
-        border-radius: 10px;
-      }
-      
-      form h3 {
-        color: #555;
-        font-weight: 800;
-        margin-bottom: 20px;
-      }
-      
-      form input, form textarea{
-        border: 0;
-        margin: 10px 0;
-        padding: 20px;
-        outline: none;
-        background: #f5f5f5;
-        font-size: 16px;
-      }
-      
-      form button{
-        padding: 15px;
-        background: #ff5361;
-        color: #fff;
-        font-size: 18px;
-        border: 0;
-        outlin: none;
-        cursor: pointer;
-        width: 150px;
-        margin: 20px auto 0;
-        border-radius: 30px;
-      }
-      
+        .nav-area {
+            position: absolute;
+            right: 75px;
+            list-style: none;
+            margin-top: 40px;
+        }
+
+        .nav-area li {
+            display: inline-block;
+        }
+
+        .nav-area li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            font-family: poppins italic;
+            font-size: 16px;
+            text-transform: uppercase;
+        }
+
+        .nav-area li a:hover {
+            background: #fff;
+            color: #333;
+        }
+
+        .container {
+            width: 100%;
+            height: 100vh;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("https://cdn.githubraw.com/CG3-C0ding-W/Photography-Portfolio/1131a78dcdfdf622d989312628946d5114e59276/Assets/gallery%20images/Beach_MG_2832.JPG");
+            height: 100vh;
+            -webkit-background-size: cover;
+            background-size: cover;
+            background-position: center center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .form {
+            background: #fff;
+            display: flex;
+            flex-direction: column;
+            padding: 2vw 4vw;
+            width: 90%;
+            max-width: 600px;
+            border-radius: 10px;
+        }
+
+        form h3 {
+            color: #555;
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+
+        form input,
+        form textarea {
+            border: 0;
+            margin: 10px 0;
+            padding: 20px;
+            outline: none;
+            background: #f5f5f5;
+            font-size: 16px;
+        }
+
+        form button {
+            padding: 15px;
+            background: #ff5361;
+            color: #fff;
+            font-size: 18px;
+            border: 0;
+            outlin: none;
+            cursor: pointer;
+            width: 150px;
+            margin: 20px auto 0;
+            border-radius: 30px;
+        }
     </style>
     <script src="contact.script.js" type="text/javascript"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script type="text/javascript">
-       (function(){
-          emailjs.init("hPS1f-EKkRSpLM1Zb");
-       })();
+        (function() {
+            emailjs.init("hPS1f-EKkRSpLM1Zb");
+        })();
     </script>
-    
+
     <!-- Place in separate script file -->
     <script>
-      function SendMail(){
-        var params = {
-          from_name : document.getElementById("fullName").value,
-          email_id: document.getElementById("email_id").value,
-          phone_number: document.getElementById("phone_Number").value,
-          message: document.getElementById("message").value
+        function SendMail() {
+            var params = {
+                from_name: document.getElementById("fullName").value,
+                email_id: document.getElementById("email_id").value,
+                phone_number: document.getElementById("phone_Number").value,
+                message: document.getElementById("message").value
+            }
+            emailjs.send("service_hgo6ekq", "template_y1sm6aq", params).then(function(res) {
+                alert("Success! " + res.status);
+            })
         }
-        emailjs.send("service_hgo6ekq", "template_y1sm6aq", params).then(function (res) {
-            alert("Success! " + res.status);
-          })
-      }
     </script>
-    
-  </head>
-  <body>
-    <div class="container">
-      <form class="form">
-        <h3>GET IN TOUCH</h3>
-        <input type="text" id="fullName" placeholder="Your Name" required>
-        <input type="email" id="email_id" placeholder="Email" required>
-        <input type="text" id="phoneNumber" placeholder="Phone Number" required>
-        <textarea id="message" rows="4" placeholder="Leave us a message"></textarea>
-        <button onclick="SendMail()" type="submit">Submit</button>
-      </form>
+
+</head>
+
+<body>
+    <div class="background-image">
+        <div class="wrapper">
+            <ul class="nav-area">
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="container">
+            <form class="form">
+                <h3>GET IN TOUCH</h3>
+                <input type="text" id="fullName" placeholder="Your Name" required>
+                <input type="email" id="email_id" placeholder="Email" required>
+                <input type="text" id="phoneNumber" placeholder="Phone Number" required>
+                <textarea id="message" rows="4" placeholder="Leave us a message"></textarea>
+                <button onclick="SendMail()" type="submit">Submit</button>
+            </form>
+        </div>
     </div>
-  </body>
+</body>
+
 </html>
