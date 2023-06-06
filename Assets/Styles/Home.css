@@ -1,5 +1,5 @@
 <!--Home css style-->
-<!-- A note -->
+<!--A note -->
 
 *{
   margin: 0;
@@ -9,7 +9,7 @@
 
 .wrapper{
   width: 1170px;
-  margin: auto;
+  margin: 0;
 }
 
 header{
