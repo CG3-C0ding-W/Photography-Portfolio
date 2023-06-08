@@ -1,1 +1,181 @@
+<!DOCTYPE html>
 
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>G3Visuals | Gallery</title>
+    <link rel="stylesheet" href="Assets/Styles/Gallery.css" />
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .wrapper {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        section{
+           padding: 20px;
+           width: 100%;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           flex-direction: column;
+           margin: 40px auto;
+        }
+
+        section ul{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        section ul li{
+            list-style: none;
+            background: white;
+            padding: 12px 20px;
+            margin: 5px;
+            letter-spacing: 1px;
+            cursor: pointer;
+        }
+
+        section ul li.active {
+            background: red;
+            color: #fff;
+        }
+
+        .product{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .product .pictureBox{
+            position: relative;
+            width: 200px;
+            height: 200px;
+            margin: 5px;
+            display: block;
+        }
+
+        .product .pictureBox img{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .product .pictureBox.hide{
+            display: none;
+        }
+
+        header {
+            background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("https://cdn.githubraw.com/CG3-C0ding-W/Photography-Portfolio/1131a78dcdfdf622d989312628946d5114e59276/Assets/gallery%20images/Beach_MG_2832.JPG");
+            width: 100%;
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .nav-area {
+            position: absolute;
+            right: 75px;
+            list-style: none;
+            margin-top: 40px;
+        }
+
+        .nav-area li {
+            display: inline-block;
+        }
+
+        .nav-area li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            font-family: poppins italic;
+            font-size: 16px;
+            text-transform: uppercase;
+        }
+
+        .nav-area li a:hover {
+            background: #fff;
+            color: #333;
+        }
+
+    </style>
+</head>
+<body>
+    <section>
+        <div>
+            <div class="wrapper">
+                <ul class="nav-area">
+                    <li><a href="Home.html">Home</a></li>
+                    <li><a href="About.html">About</a></li>
+                    <li><a href="Filter-Gallery.html">Gallery</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                </ul>
+             </div>
+        </div>
+        <div>
+            <ul>
+                <li class="list active" data-filter="all">All</li>
+                <li class="list" data-filter="engagements">Engagements</li>
+                <li class="list" data-filter="celebrations">Celebrations</li>
+                <li class="list" data-filter="portraits">Portraits</li>
+                <li class="list" data-filter="street">Street</li>
+                <li class="list" data-filter="travel">Travel</li>
+            </ul>
+        </div>
+        <div class="product">
+            <div class="pictureBox" data-item="engagements"><img src="Assets/gallery images/Engage_MG_1059.jpg" alt="" /></div>
+            <div class="pictureBox" data-item="celebrations"><img src="Assets/gallery images/PurpleHaze_MG_2783.jpg" alt="" /></div>
+            <div class="pictureBox" data-item="portraits"><img src="Assets/gallery images/Car_MG_2575.jpg" alt="" /></div>
+            <div class="pictureBox" data-item="street"><img src="Assets/gallery images/LA_Skyline_MG_2769.jpg" alt="" /></div>
+            <div class="pictureBox" data-item="travel"><img src="Assets/gallery images/Beach_MG_2832.JPG" alt="" /></div>
+            <div class="pictureBox" data-item="street"><img src="Assets/gallery images/LA_Skyline_MG_2667.jpg" alt="" /></div>
+            <div class="pictureBox" data-item="travel"><img src="Assets/gallery images/CTGStreet_MG_1764.jpg" alt="" /></div>
+        </div>
+    </section>
+    <script>
+        let list = document.querySelectorAll('.list');
+        let pictureBox = document.querySelectorAll('.pictureBox');
+
+        for (let i = 0; i < list.length; i++) {
+            list[i].addEventListener('click', function () {
+                for (let j = 0; j < list.length; j++) {
+                    list[j].classList.remove('active');
+                }
+                this.classList.add('active');
+
+                let dataFilter = this.getAttribute('data-filter');
+
+                for (let k = 0; k < pictureBox.length; k++) {
+                    pictureBox[k].classList.remove('active');
+                    pictureBox[k].classList.add('hide');
+
+                    if (pictureBox[k].getAttribute('data-item') == dataFilter || dataFilter == "all"){
+                        pictureBox[k].classList.remove('hide');
+                        pictureBox[k].classList.add('active');
+                    }
+                }
+            })
+        }
+    </script>
+</body>
+</html>
