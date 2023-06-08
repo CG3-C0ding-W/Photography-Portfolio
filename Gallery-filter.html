@@ -98,20 +98,24 @@
         }
 
         .product {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            justify-items: center;
-            grid-gap: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
         }
 
         .product .pictureBox {
-            width: 100%;
-            height: auto;
+            position: relative;
+            width: 200px;
+            height: 200px;
             margin: 5px;
-            display: block;
+            display: block
         }
 
         .product .pictureBox img {
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
             height: 100%;
             object-fit: cover;
