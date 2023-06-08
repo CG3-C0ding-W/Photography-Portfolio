@@ -41,7 +41,7 @@ header{
   color: #fff;
   text-decoration: none;
   padding: 10px 20px;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins';
   font-size: 20px;
   text-transform: uppercase;
 }
@@ -50,8 +50,6 @@ header{
   background: #fff;
   color:#333;
 }
-
-.logo img {}
 
 .welcome-text{
   position: absolute;
