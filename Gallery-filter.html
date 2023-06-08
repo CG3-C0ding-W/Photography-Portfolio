@@ -3,19 +3,16 @@
 <html lang="en">
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8" />
     <title>G3Visuals | Gallery</title>
     <link rel="stylesheet" href="Assets/Styles/Gallery-filter.css">
     <style>
-    
-        <!-- General -->
-    
-        * {
+        <!-- General -->* {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: 'Poppins', sans-serif;
-            
         }
 
         body {
@@ -29,16 +26,12 @@
             margin-top: 3%;
             text-align: right;
         }
-        
-        section{
+
+        section {
             margin-top: 4%;
         }
-        
-        <!-- General End -->
 
-        <!-- Nav Bar -->
-
-        .nav-area {
+        <!-- General End --><!-- Nav Bar -->.nav-area {
             position: absolute;
             right: 0px;
             list-style: none;
@@ -53,7 +46,7 @@
             color: #fff;
             text-decoration: none;
             padding: 10px 20px;
-            font-family: poppins italic;
+            font-family: 'Poppins', sans-serif;
             font-size: 20px;
             text-transform: uppercase;
         }
@@ -63,18 +56,15 @@
             color: #333;
         }
 
-        <!-- Nav Bar End -->
-        
-        <!-- Gallery -->
-        
-        .filter-buttons {
+        <!-- Nav Bar End --><!-- Gallery -->.filter-buttons {
             position: absolute;
             padding: 20px;
             display: flex;
-            justify-content: left;
+            justify-content: center;
             align-items: center;
             flex-direction: row;
             margin: 100px auto;
+            flex-wrap: wrap;
         }
 
         .filter-buttons ul {
@@ -99,24 +89,20 @@
         }
 
         .product {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            justify-items: center;
+            grid-gap: 10px;
         }
 
         .product .pictureBox {
-            position: relative;
-            width: 200px;
-            height: 200px;
+            width: 100%;
+            height: auto;
             margin: 5px;
             display: block;
         }
 
         .product .pictureBox img {
-            position: absolute;
-            top: 0;
-            left: 0;
             width: 100%;
             height: 100%;
             object-fit: cover;
