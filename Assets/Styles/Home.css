@@ -1,5 +1,6 @@
-<!--Home css style-->
-<!--A note -->
+/* Home css style */
+
+/* General */
 
 *{
   margin: 0;
@@ -26,6 +27,8 @@ header{
   position: relative;
 }
 
+/* Nav Bar Section */
+
 .nav-area{
   position: absolute;
   right: 75px;
@@ -50,6 +53,8 @@ header{
   background: #fff;
   color:#333;
 }
+
+/* Welcome Section */
 
 .welcome-text{
   position: absolute;
@@ -82,4 +87,19 @@ header{
 .welcome-text a:hover{
   background: #fff;
   color: #333;
+}
+
+/* Gallery Section */
+
+.gallery-section{
+  background-color: black;
+  width: 100vw;
+  height: 100vh;
+}
+
+.gallery-section h1, p{
+            font-family: 'Raleway', sans-serif;
+            font-weight: 700;
+            text-align: center;
+            font-size: 6rem;
 }
