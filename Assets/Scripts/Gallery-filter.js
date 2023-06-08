@@ -1,4 +1,4 @@
-<script>
+
     function galleryFilter() {
         let list = document.querySelectorAll('.list');
         let totalPictures = document.querySelectorAll('.gallery-Images');
@@ -24,4 +24,4 @@
             })
         }
     }
-</script>
+
