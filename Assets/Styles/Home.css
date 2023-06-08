@@ -1,105 +1,166 @@
 /* Home css style */
 
-/* General */
+        /* General */
 
-*{
-  margin: 0;
-  padding: 0;
-}
+        * {
+            margin: 0;
+            padding: 0;
+        }
 
-.wrapper{
-  width: 100%;
-  height: 100%;
-  margin: 0;
-}
+        .wrapper {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+        }
 
-body{
-  margin: 0;
-}
+        body {
+            margin: 0;
+            background: black;
+        }
 
-header{
-  background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("https://cdn.githubraw.com/CG3-C0ding-W/Photography-Portfolio/1131a78dcdfdf622d989312628946d5114e59276/Assets/gallery%20images/Beach_MG_2832.JPG");
-  width: 100%;
-  height: 100vh;
-  -webkit-background-size: cover; 
-  background-size: cover;
-  background-position: center;
-  position: relative;
-}
+        header {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("https://cdn.githubraw.com/CG3-C0ding-W/Photography-Portfolio/1131a78dcdfdf622d989312628946d5114e59276/Assets/gallery%20images/Beach_MG_2832.JPG");
+            width: 100%;
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
 
-/* Nav Bar Section */
+        /* Nav Bar Section */
 
-.nav-area{
-  position: absolute;
-  right: 75px;
-  list-style: none;
-  margin-top: 40px;
-}
+        .nav-area {
+            position: absolute;
+            right: 75px;
+            list-style: none;
+            margin-top: 40px;
+        }
 
-.nav-area li{
-  display: inline-block;
-}
+            .nav-area li {
+                display: inline-block;
+            }
 
-.nav-area li a{
-  color: #fff;
-  text-decoration: none;
-  padding: 10px 20px;
-  font-family: 'Poppins';
-  font-size: 20px;
-  text-transform: uppercase;
-}
+                .nav-area li a {
+                    color: #fff;
+                    text-decoration: none;
+                    padding: 10px 20px;
+                    font-family: 'Poppins';
+                    font-size: 20px;
+                    text-transform: uppercase;
+                }
 
-.nav-area li a:hover{
-  background: #fff;
-  color:#333;
-}
+                    .nav-area li a:hover {
+                        background: #fff;
+                        color: #333;
+                    }
 
-/* Welcome Section */
+        /* Welcome Section */
 
-.welcome-text{
-  position: absolute;
-  width: 600px;
-  height: 300px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-.welcome-text h1{
-  text-align: center;
-  color: #fff;
-  text-transform: uppercase;
-  font-size: 60px;
-}
-
-.welcome-text a{
-  border: 2px solid #fff;
-  padding: 10px 25px;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-size: 14px;
-  margin: 5px;
-  display: inline-block;
-  color: #fff;
-}
-
-.welcome-text a:hover{
-  background: #fff;
-  color: #333;
-}
-
-/* Gallery Section */
-
-.gallery-section{
-  background-color: black;
-  width: 100vw;
-  height: 100vh;
-}
-
-.gallery-section h1, p{
-            font-family: 'Raleway', sans-serif;
-            font-weight: 700;
+        .welcome-text {
+            position: absolute;
+            width: 600px;
+            height: 300px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
             text-align: center;
-            font-size: 6rem;
-}
+        }
+
+            .welcome-text h1 {
+                text-align: center;
+                color: #fff;
+                text-transform: uppercase;
+                font-size: 60px;
+            }
+
+            .welcome-text a {
+                border: 2px solid #fff;
+                padding: 10px 25px;
+                text-decoration: none;
+                text-transform: uppercase;
+                font-size: 14px;
+                margin: 5px;
+                display: inline-block;
+                color: #fff;
+            }
+
+                .welcome-text a:hover {
+                    background: #fff;
+                    color: #333;
+                }
+
+        /* Gallery Section */
+
+        .gallery-section {
+            background-color: black;
+            width: 100vw;
+            height: 100vh;
+        }
+
+            .gallery-section h1 {
+                text-align: center;
+                color: #fff;
+                text-transform: uppercase;
+                font-size: 4rem;
+                position: relative;
+                padding-top: 50px;
+            }
+
+        .filter-buttons {
+            position: relative;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+            .filter-buttons ul {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: row;
+                padding: 1rem;
+            }
+
+                .filter-buttons ul li {
+                    list-style: none;
+                    background: white;
+                    padding: 12px 20px;
+                    margin: 5px;
+                    letter-spacing: 1px;
+                    cursor: pointer;
+                }
+
+                    .filter-buttons ul li.active {
+                        background: red;
+                        color: #fff;
+                    }
+
+        .gallery {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 10px;
+            gap: 10px;
+        }
+
+        .gallery-Images {
+            height: 350px;
+            width: auto;
+            position: relative;
+        }
+
+            .gallery-Images img {
+                vertical-align: middle;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 5px;
+            }
+
+            .gallery-Images.hide {
+                display: none;
+            }
