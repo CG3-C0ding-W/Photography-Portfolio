@@ -1,35 +1,250 @@
-<!-- Home alone -->
+<!-- Index html -->
 
 <!doctype html>
 <html lang="en">
-  
-  <head>
+
+<head>
     <meta charset="UTF-8">
     <title>G3VisualsPhotography</title>
     <link rel="stylesheet" href="Assets/Styles/Home.css">
-  </head>
-  
-  <body>
+    <style>
+        /* Home css style */
+
+        /* General */
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .wrapper {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+        }
+
+        body {
+            margin: 0;
+            background: black;
+        }
+
+        header {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("https://cdn.githubraw.com/CG3-C0ding-W/Photography-Portfolio/1131a78dcdfdf622d989312628946d5114e59276/Assets/gallery%20images/Beach_MG_2832.JPG");
+            width: 100%;
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        /* Nav Bar Section */
+
+        .nav-area {
+            position: absolute;
+            right: 75px;
+            list-style: none;
+            margin-top: 40px;
+        }
+
+            .nav-area li {
+                display: inline-block;
+            }
+
+                .nav-area li a {
+                    color: #fff;
+                    text-decoration: none;
+                    padding: 10px 20px;
+                    font-family: 'Poppins';
+                    font-size: 20px;
+                    text-transform: uppercase;
+                }
+
+                    .nav-area li a:hover {
+                        background: #fff;
+                        color: #333;
+                    }
+
+        /* Welcome Section */
+
+        .welcome-text {
+            position: absolute;
+            width: 600px;
+            height: 300px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+            .welcome-text h1 {
+                text-align: center;
+                color: #fff;
+                text-transform: uppercase;
+                font-size: 60px;
+            }
+
+            .welcome-text a {
+                border: 2px solid #fff;
+                padding: 10px 25px;
+                text-decoration: none;
+                text-transform: uppercase;
+                font-size: 14px;
+                margin: 5px;
+                display: inline-block;
+                color: #fff;
+            }
+
+                .welcome-text a:hover {
+                    background: #fff;
+                    color: #333;
+                }
+
+        /* Gallery Section */
+
+        .gallery-section {
+            background-color: black;
+            width: 100vw;
+            height: 100vh;
+        }
+
+            .gallery-section h1 {
+                text-align: center;
+                color: #fff;
+                text-transform: uppercase;
+                font-size: 4rem;
+                position: relative;
+                padding-top: 50px;
+            }
+
+        .filter-buttons {
+            position: relative;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+            .filter-buttons ul {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: row;
+                padding: 1rem;
+            }
+
+                .filter-buttons ul li {
+                    list-style: none;
+                    background: white;
+                    padding: 12px 20px;
+                    margin: 5px;
+                    letter-spacing: 1px;
+                    cursor: pointer;
+                }
+
+                    .filter-buttons ul li.active {
+                        background: red;
+                        color: #fff;
+                    }
+
+        .gallery {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 10px;
+            gap: 10px;
+        }
+
+        .gallery-Images {
+            height: 350px;
+            width: auto;
+            position: relative;
+        }
+
+            .gallery-Images img {
+                vertical-align: middle;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 5px;
+            }
+
+            .gallery-Images.hide {
+                display: none;
+            }
+    </style>
+</head>
+
+<body>
     <header>
-      <div class="background-image">
-        <div class="wrapper">
-          <ul class="nav-area">
-            <li><a href="Home.html">Home</a></li>
-            <li><a href="About.html">About</a></li>
-            <li><a href="#gallery-section">Gallery</a></li>
-            <li><a href="Contact.html">Contact</a></li>
-          </ul>
+        <div class="background-image">
+            <div class="wrapper">
+                <ul class="nav-area">
+                    <li><a href="Home.html">Home</a></li>
+                    <li><a href="About.html">About</a></li>
+                    <li><a href="#gallery-section">Gallery</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="welcome-text">
+                <h1>Let's Shoot</h1>
+                <a href="Contact.html">Contact Us</a>
+            </div>
         </div>
-        <div class="welcome-text">
-          <h1>Let's Shoot</h1>
-          <a href="Contact.html">Contact Us</a>
-        </div>
-     </div>
     </header>
     <section id="gallery-section" class="gallery-section">
-      <h1>Hello, I'm Curtis</h1>
-      <p>Enjoy my gallery</p>
+        <!-- Testing 1,2
+        <p>Enjoy my gallery</p> -->
+        <div class="gallery-section-title">
+            <h1>Gallery</h1>
+        </div>
+        <div class="filter-buttons">
+            <ul>
+                <li class="list active" data-filter="all">All</li>
+                <li class="list" data-filter="engagements">Engagements</li>
+                <li class="list" data-filter="celebrations">Celebrations</li>
+                <li class="list" data-filter="portraits">Portraits</li>
+                <li class="list" data-filter="street">Street</li>
+                <li class="list" data-filter="travel">Travel</li>
+            </ul>
+        </div>
+        <div class="gallery">
+            <div class="gallery-Images" data-item="engagements"><img src="https://images.unsplash.com/photo-1514565131-fce0801e5785?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y2l0eXNjYXBlfGVufDB8fDB8fHww&w=1000&q=80" alt="" /></div>
+            <div class="gallery-Images" data-item="celebrations"><img src="https://images.unsplash.com/42/U7Fc1sy5SCUDIu4tlJY3_NY_by_PhilippHenzler_philmotion.de.jpg?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb" alt="" /></div>
+            <div class="gallery-Images" data-item="portraits"><img src="https://images.unsplash.com/photo-1519010470956-6d877008eaa4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGNpdHlzY2FwZXxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80" alt="" /></div>
+            <div class="gallery-Images" data-item="street"><img src="Assets/gallery images/LA_Skyline_MG_2769.jpg" alt="" /></div>
+            <div class="gallery-Images" data-item="travel"><img src="Assets/gallery images/Beach_MG_2832.JPG" alt="" /></div>
+            <div class="gallery-Images" data-item="street"><img src="Assets/gallery images/LA_Skyline_MG_2667.jpg" alt="" /></div>
+            <div class="gallery-Images" data-item="travel"><img src="Assets/gallery images/CTGStreet_MG_1764.jpg" alt="" /></div>
+        </div>
     </section>
-  </body>
-  
+    <script>
+        let list = document.querySelectorAll('.list');
+        let totalPictures = document.querySelectorAll('.gallery-Images');
+
+        for (let i = 0; i < list.length; i++) {
+            list[i].addEventListener('click', function () {
+                for (let j = 0; j < list.length; j++) {
+                    list[j].classList.remove('active');
+                }
+                this.classList.add('active');
+
+                let dataFilter = this.getAttribute('data-filter');
+
+                for (let k = 0; k < totalPictures.length; k++) {
+                    totalPictures[k].classList.remove('active');
+                    totalPictures[k].classList.add('hide');
+
+                    if (totalPictures[k].getAttribute('data-item') == dataFilter || dataFilter == "all") {
+                        totalPictures[k].classList.remove('hide');
+                        totalPictures[k].classList.add('active');
+                    }
+                }
+            })
+        }
+    </script>
+</body>
+
 </html>
