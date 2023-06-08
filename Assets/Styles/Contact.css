@@ -2,7 +2,6 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'poppins', 'sans-serif';
         }
 
         .nav-area {
@@ -20,8 +19,8 @@
             color: #fff;
             text-decoration: none;
             padding: 10px 20px;
-            font-family: poppins italic;
-            font-size: 16px;
+            font-family: 'Poppins';
+            font-size: 20px;
             text-transform: uppercase;
         }
 
