@@ -92,19 +92,21 @@
             color: #fff;
         }
 
-        .product {
+        .gallery {
             display: flex;
+            justify-content: center;
+            align-items: center;
             flex-wrap: wrap;
             padding: 10px;
-            gap:10px;
+            gap: 10px;
         }
 
-        .pictureBox {
+        .gallery-Images {
             height: 300px;
             position: relative;
         }
 
-        .pictureBox img {
+        .gallery-Images img {
             vertical-align: middle;
             width: 100%;
             height: 100%;
@@ -112,7 +114,7 @@
             border-radius: 5px;
         }
 
-        .pictureBox.hide {
+        .gallery-Images.hide {
             display: none;
         }
     </style>
@@ -131,7 +133,7 @@
             </div>
         </div>
     </header>
-    <section class="test1">
+    <section>
         <div class="filter-buttons">
             <ul>
                 <li class="list active" data-filter="all">All</li>
@@ -142,19 +144,19 @@
                 <li class="list" data-filter="travel">Travel</li>
             </ul>
         </div>
-        <div class="product">
-            <div class="pictureBox" data-item="engagements"><img src="Assets/gallery images/Engage_MG_1059.jpg" alt="" /></div>
-            <div class="pictureBox" data-item="celebrations"><img src="Assets/gallery images/PurpleHaze_MG_2783.jpg" alt="" /></div>
-            <div class="pictureBox" data-item="portraits"><img src="Assets/gallery images/Car_MG_2575.jpg" alt="" /></div>
-            <div class="pictureBox" data-item="street"><img src="Assets/gallery images/LA_Skyline_MG_2769.jpg" alt="" /></div>
-            <div class="pictureBox" data-item="travel"><img src="Assets/gallery images/Beach_MG_2832.JPG" alt="" /></div>
-            <div class="pictureBox" data-item="street"><img src="Assets/gallery images/LA_Skyline_MG_2667.jpg" alt="" /></div>
-            <div class="pictureBox" data-item="travel"><img src="Assets/gallery images/CTGStreet_MG_1764.jpg" alt="" /></div>
+        <div class="gallery">
+            <div class="gallery-Images" data-item="engagements"><img src="https://images.unsplash.com/photo-1514565131-fce0801e5785?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y2l0eXNjYXBlfGVufDB8fDB8fHww&w=1000&q=80" alt="" /></div>
+            <div class="gallery-Images" data-item="celebrations"><img src="https://images.unsplash.com/42/U7Fc1sy5SCUDIu4tlJY3_NY_by_PhilippHenzler_philmotion.de.jpg?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb" alt="" /></div>
+            <div class="gallery-Images" data-item="portraits"><img src="https://images.unsplash.com/photo-1519010470956-6d877008eaa4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGNpdHlzY2FwZXxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80" alt="" /></div>
+            <div class="gallery-Images" data-item="street"><img src="Assets/gallery images/LA_Skyline_MG_2769.jpg" alt="" /></div>
+            <div class="gallery-Images" data-item="travel"><img src="Assets/gallery images/Beach_MG_2832.JPG" alt="" /></div>
+            <div class="gallery-Images" data-item="street"><img src="Assets/gallery images/LA_Skyline_MG_2667.jpg" alt="" /></div>
+            <div class="gallery-Images" data-item="travel"><img src="Assets/gallery images/CTGStreet_MG_1764.jpg" alt="" /></div>
         </div>
     </section>
     <script>
         let list = document.querySelectorAll('.list');
-        let pictureBox = document.querySelectorAll('.pictureBox');
+        let totalPictures = document.querySelectorAll('.gallery-Images');
 
         for (let i = 0; i < list.length; i++) {
             list[i].addEventListener('click', function() {
@@ -165,13 +167,13 @@
 
                 let dataFilter = this.getAttribute('data-filter');
 
-                for (let k = 0; k < pictureBox.length; k++) {
-                    pictureBox[k].classList.remove('active');
-                    pictureBox[k].classList.add('hide');
+                for (let k = 0; k < totalPictures.length; k++) {
+                    totalPictures[k].classList.remove('active');
+                    totalPictures[k].classList.add('hide');
 
-                    if (pictureBox[k].getAttribute('data-item') == dataFilter || dataFilter == "all") {
-                        pictureBox[k].classList.remove('hide');
-                        pictureBox[k].classList.add('active');
+                    if (totalPictures[k].getAttribute('data-item') == dataFilter || dataFilter == "all") {
+                        totalPictures[k].classList.remove('hide');
+                        totalPictures[k].classList.add('active');
                     }
                 }
             })
