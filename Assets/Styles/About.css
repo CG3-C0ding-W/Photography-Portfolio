@@ -134,17 +134,16 @@
             position: relative;
             padding: 20px;
             display: flex;
+            flex-wrap: wrap;
             justify-content: center;
             align-items: center;
-            flex-direction: row;
-            flex-wrap: wrap;
         }
 
         .filter-buttons ul {
             display: flex;
+            flex-wrap: wrap;
             justify-content: center;
             align-items: center;
-            flex-direction: row;
             padding: 1rem;
         }
 
