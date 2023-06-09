@@ -85,8 +85,21 @@
             background: #f5f5f5;
             font-size: 16px;
         }
+        
+        form button {
+            padding: 15px;
+            background: #ff5361;
+            color: #fff;
+            font-size: 18px;
+            border: 0;
+            outline: none;
+            cursor: pointer;
+            width: 150px;
+            margin: 20px auto 0;
+            border-radius: 30px;
+        }
 
- /* Gallery Section */
+/* Gallery Section */
 
         .gallery-section {
             background-color: black;
@@ -108,17 +121,16 @@
             position: relative;
             padding: 20px;
             display: flex;
+            flex-wrap: wrap;
             justify-content: center;
             align-items: center;
-            flex-direction: row;
-            flex-wrap: wrap;
         }
 
         .filter-buttons ul {
             display: flex;
+            flex-wrap: wrap;
             justify-content: center;
             align-items: center;
-            flex-direction: row;
             padding: 1rem;
         }
 
@@ -164,15 +176,3 @@
         }
 
 
-        form button {
-            padding: 15px;
-            background: #ff5361;
-            color: #fff;
-            font-size: 18px;
-            border: 0;
-            outlin: none;
-            cursor: pointer;
-            width: 150px;
-            margin: 20px auto 0;
-            border-radius: 30px;
-        }
