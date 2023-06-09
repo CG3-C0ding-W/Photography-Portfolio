@@ -6,12 +6,12 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us</title>
-    <link rel="stylesheet" href="Assets/Styles/Contact.css"">
-    <script src="contact.script.js" type="text/javascript"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script type="text/javascript">
+    <link rel="stylesheet" href="Assets/Styles/Contact.css" ">
+    <script src="contact.script.js " type="text/javascript "></script>
+    <script type="text/javascript " src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js "></script>
+    <script type="text/javascript ">
         (function() {
-            emailjs.init("hPS1f-EKkRSpLM1Zb");
+            emailjs.init("hPS1f-EKkRSpLM1Zb ");
         })();
     </script>
 
@@ -19,12 +19,12 @@
     <script>
         function SendMail() {
             var params = {
-                from_name: document.getElementById("fullName").value,
-                email_id: document.getElementById("email_id").value,
-                phone_number: document.getElementById("phone_Number").value,
-                message: document.getElementById("message").value
+                from_name: document.getElementById("fullName ").value,
+                email_id: document.getElementById("email_id ").value,
+                phone_number: document.getElementById("phone_Number ").value,
+                message: document.getElementById("message ").value
             }
-            emailjs.send("service_hgo6ekq", "template_y1sm6aq", params).then(function(res) {
+            emailjs.send("service_hgo6ekq ", "template_y1sm6aq ", params).then(function(res) {
                 alert("Success! " + res.status);
             })
         }
@@ -33,26 +33,88 @@
 </head>
 
 <body>
-    <div class="background-image">
-        <div class="wrapper">
-            <ul class="nav-area">
-                <li><a href="Home.html">Home</a></li>
-                <li><a href="About.html">About</a></li>
-                <li><a href="Gallery-filter.html">Gallery</a></li>
-                <li><a href="Contact.html">Contact</a></li>
+   <header>
+    <div class="background-image ">
+        <div class="wrapper ">
+            <ul class="nav-area ">
+                <li><a href="Home.html ">Home</a></li>
+                <li><a href="About.html ">About</a></li>
+                <li><a href="#gallery-section ">Gallery</a></li>
+                <li><a href="Contact.html ">Contact</a></li>
             </ul>
         </div>
-        <div class="container">
-            <form class="form">
+        <div class="container ">
+            <form class="form ">
                 <h3>GET IN TOUCH</h3>
-                <input type="text" id="fullName" placeholder="Your Name" required>
-                <input type="email" id="email_id" placeholder="Email" required>
-                <input type="text" id="phoneNumber" placeholder="Phone Number" required>
-                <textarea id="message" rows="4" placeholder="Leave us a message"></textarea>
-                <button onclick="SendMail()" type="submit">Submit</button>
+                <input type="text " id="fullName " placeholder="Your Name " required>
+                <input type="email " id="email_id " placeholder="Email " required>
+                <input type="text " id="phoneNumber " placeholder="Phone Number " required>
+                <textarea id="message " rows="4 " placeholder="Leave us a message "></textarea>
+                <button onclick="SendMail() " type="submit ">Submit</button>
             </form>
         </div>
     </div>
+   </header>
+   <section id="gallery-section " class="gallery-section">
+        <div class="gallery-section-title">
+            <h1>Gallery</h1>
+        </div>
+        <div class="filter-buttons ">
+            <ul>
+                <li class="list active " data-filter="all ">All</li>
+                <li class="list " data-filter="engagements ">Engagements</li>
+                <li class="list " data-filter="celebrations ">Celebrations</li>
+                <li class="list " data-filter="portraits ">Portraits</li>
+                <li class="list " data-filter="street ">Street</li>
+                <li class="list " data-filter="travel ">Travel</li>
+            </ul>
+        </div>
+        <div class="gallery ">
+            <div class="gallery-Images " data-item="engagements "><img src="Assets/gallery images/Engage_MG_1059.jpg " alt="alt " /></div>
+            <div class="gallery-Images " data-item="travel "><img src="Assets/gallery images/Beach_MG_2832.JPG " alt=" " /></div>
+            <div class="gallery-Images " data-item="street "><img src="Assets/gallery images/Car_MG_2575.jpg " alt=" " /></div>
+            <div class="gallery-Images " data-item="engagements "><img src="Assets/gallery images/Engage_MG_1165.jpg " alt=" " /></div>
+            <div class="gallery-Images " data-item="travel "><img src="Assets/gallery images/CTGStreet_MG_1764.jpg " alt=" " /></div>
+            <div class="gallery-Images " data-item="street "><img src="Assets/gallery images/LA_Skyline_MG_2667.jpg " alt=" " /></div>
+            <div class="gallery-Images " data-item="engagements "><img src="Assets/gallery images/Engage_MG_1545.jpg " alt=" " /></div>
+            <div class="gallery-Images " data-item="travel "><img src="Assets/gallery images/CTG_Pool_MG_2451.jpg " alt=" " /></div>
+            <div class="gallery-Images " data-item="street "><img src="Assets/gallery images/LA_Skyline_MG_2737.jpg " alt=" " /></div>
+            <div class="gallery-Images " data-item="engagements "><img src="Assets/gallery images/Engage_MG_1466.jpg " alt=" " /></div>
+            <div class="gallery-Images " data-item="travel "><img src="Assets/gallery images/CTG Bus_MG_1777.jpg " alt=" " /></div>
+            <div class="gallery-Images " data-item="street "><img src="Assets/gallery images/LA_Skyline_MG_2769.jpg " alt=" " /></div>
+            <div class="gallery-Images " data-item="engagements "><img src="Assets/gallery images/Engage_MG_1147.jpg " alt=" " /></div>
+            <div class="gallery-Images " data-item="street "><img src="Assets/gallery images/PurpleHaze_MG_2783.jpg " alt=" " /></div>
+            <div class="gallery-Images " data-item="engagements "><img src="Assets/gallery images/Engage_MG_1014.jpg " alt=" " /></div>
+        </div>
+    </section>
+    <script>
+        function galleryFilter() {
+            let list = document.querySelectorAll('.list');
+            let totalPictures = document.querySelectorAll('.gallery-Images');
+
+            for (let i = 0; i < list.length; i++) {
+                list[i].addEventListener('click', function() {
+                    for (let j = 0; j < list.length; j++) {
+                        list[j].classList.remove('active');
+                    }
+                    this.classList.add('active');
+
+                    let dataFilter = this.getAttribute('data-filter');
+
+                    for (let k = 0; k < totalPictures.length; k++) {
+                        totalPictures[k].classList.remove('active');
+                        totalPictures[k].classList.add('hide');
+
+                        if (totalPictures[k].getAttribute('data-item') == dataFilter || dataFilter == "all ") {
+                            totalPictures[k].classList.remove('hide');
+                            totalPictures[k].classList.add('active');
+                        }
+                    }
+                })
+            }
+        }
+        galleryFilter();
+    </script>        
 </body>
 
 </html>
