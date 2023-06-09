@@ -16,15 +16,15 @@
             <ul class="nav-area">
                 <li><a href="Home.html">Home</a></li>
                 <li><a href="About.html">About</a></li>
-                <li><a href="Gallery-filter.html">Gallery</a></li>
+                <li><a href="#gallery-section">Gallery</a></li>
                 <li><a href="Contact.html">Contact</a></li>
             </ul>
         </div>
-        <div class="container-about">
-            <form class="form">
+        <div class="about-container">
+            <form class="about-form">
                 <h1>About</h1>
-                <div class="content">
-                    <div class="text">
+                <div class="about-content">
+                    <div class="about-text">
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                             Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                         <p>Phasellus vestibulum lorem sed risus ultricies tristique nulla aliquet enim. Sed augue lacus viverra vitae congue eu consequat. Imperdiet nulla malesuada pellentesque elit eget. Lacus viverra vitae congue eu consequat. Pulvinar
@@ -35,14 +35,73 @@
                             elementum nisi quis. Viverra tellus in hac habitasse platea dictumst vestibulum rhoncus est. Ac feugiat sed lectus vestibulum mattis ullamcorper velit. Vitae suscipit tellus mauris a diam maecenas. Magna sit amet purus gravida
                             quis. Pellentesque elit eget gravida cum. Sed nisi lacus sed viverra tellus in hac. Sodales neque sodales ut etiam sit. Platea dictumst quisque sagittis purus. Velit egestas dui id ornare arcu odio ut sem nulla.</p>
                     </div>
-                    <div class="image">
+                    <div class="about-image">
                         <img src="Assets/gallery images/Engage_MG_1014.jpg" alt="">
                     </div>
                 </div>
             </form>
         </div>
-
     </header>
+    <section id="gallery-section" class="gallery-section">
+        <div class="gallery-section-title">
+            <h1>Gallery</h1>
+        </div>
+        <div class="filter-buttons">
+            <ul>
+                <li class="list active" data-filter="all">All</li>
+                <li class="list" data-filter="engagements">Engagements</li>
+                <li class="list" data-filter="celebrations">Celebrations</li>
+                <li class="list" data-filter="portraits">Portraits</li>
+                <li class="list" data-filter="street">Street</li>
+                <li class="list" data-filter="travel">Travel</li>
+            </ul>
+        </div>
+        <div class="gallery">
+            <div class="gallery-Images" data-item="engagements"><img src="Assets/gallery images/Engage_MG_1059.jpg" alt="alt" /></div>
+            <div class="gallery-Images" data-item="travel"><img src="Assets/gallery images/Beach_MG_2832.JPG" alt="" /></div>
+            <div class="gallery-Images" data-item="street"><img src="Assets/gallery images/Car_MG_2575.jpg" alt="" /></div>
+            <div class="gallery-Images" data-item="engagements"><img src="Assets/gallery images/Engage_MG_1165.jpg" alt="" /></div>
+            <div class="gallery-Images" data-item="travel"><img src="Assets/gallery images/CTGStreet_MG_1764.jpg" alt="" /></div>
+            <div class="gallery-Images" data-item="street"><img src="Assets/gallery images/LA_Skyline_MG_2667.jpg" alt="" /></div>
+            <div class="gallery-Images" data-item="engagements"><img src="Assets/gallery images/Engage_MG_1545.jpg" alt="" /></div>
+            <div class="gallery-Images" data-item="travel"><img src="Assets/gallery images/CTG_Pool_MG_2451.jpg" alt="" /></div>
+            <div class="gallery-Images" data-item="street"><img src="Assets/gallery images/LA_Skyline_MG_2737.jpg" alt="" /></div>
+            <div class="gallery-Images" data-item="engagements"><img src="Assets/gallery images/Engage_MG_1466.jpg" alt="" /></div>
+            <div class="gallery-Images" data-item="travel"><img src="Assets/gallery images/CTG Bus_MG_1777.jpg" alt="" /></div>
+            <div class="gallery-Images" data-item="street"><img src="Assets/gallery images/LA_Skyline_MG_2769.jpg" alt="" /></div>
+            <div class="gallery-Images" data-item="engagements"><img src="Assets/gallery images/Engage_MG_1147.jpg" alt="" /></div>
+            <div class="gallery-Images" data-item="street"><img src="Assets/gallery images/PurpleHaze_MG_2783.jpg" alt="" /></div>
+            <div class="gallery-Images" data-item="engagements"><img src="Assets/gallery images/Engage_MG_1014.jpg" alt="" /></div>
+        </div>
+    </section>
+    <script>
+        function galleryFilter() {
+            let list = document.querySelectorAll('.list');
+            let totalPictures = document.querySelectorAll('.gallery-Images');
+
+            for (let i = 0; i < list.length; i++) {
+                list[i].addEventListener('click', function() {
+                    for (let j = 0; j < list.length; j++) {
+                        list[j].classList.remove('active');
+                    }
+                    this.classList.add('active');
+
+                    let dataFilter = this.getAttribute('data-filter');
+
+                    for (let k = 0; k < totalPictures.length; k++) {
+                        totalPictures[k].classList.remove('active');
+                        totalPictures[k].classList.add('hide');
+
+                        if (totalPictures[k].getAttribute('data-item') == dataFilter || dataFilter == "all") {
+                            totalPictures[k].classList.remove('hide');
+                            totalPictures[k].classList.add('active');
+                        }
+                    }
+                })
+            }
+        }
+        galleryFilter();
+    </script>
     <footer>
         <h2></h2>
     </footer>
