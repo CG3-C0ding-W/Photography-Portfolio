@@ -1,13 +1,15 @@
- /*About.css*/    
+ /* About.css */    
+    
+    /* General */
 
       * {
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
         }
 
         body {
             margin: 0;
+            background: black;
         }
 
         header {
@@ -18,6 +20,14 @@
             background-size: cover;
             background-position: center;
             position: relative;
+        }
+
+        /* Nav Bar */
+
+        .wrapper{
+            width: 100%;
+            height: 100%;
+            margin: 0;
         }
 
         .nav-area {
@@ -35,7 +45,7 @@
             color: #fff;
             text-decoration: none;
             padding: 10px 20px;
-            font-family: Poppins;
+            font-family: 'Poppins';
             font-size: 20px;
             text-transform: uppercase;
         }
@@ -44,6 +54,8 @@
             background: #fff;
             color: #333;
         }
+
+        /* About Section */
 
         .form {
             background-color: rgba(255, 255, 255, 0.6);
@@ -67,12 +79,12 @@
             padding-right: 20px;
         }
 
-        .image {
+        .about-image {
             flex: 1;
             padding-right: 20px;
         }
 
-        .image img {
+        .about-image img {
             max-width: 100%;
             height: auto;
             border-radius: 5px;
@@ -88,11 +100,88 @@
             font-size: 1rem;
         }
 
-        .container-about {
+        .about-container {
             width: 100vw;
             height: 100vh;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
+        }
+
+        /* Gallery Section */
+
+        .gallery-section {
+            background-color: black;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .gallery-section h1 {
+            text-align: center;
+            color: #fff;
+            text-transform: uppercase;
+            font-size: 4rem;
+            position: relative;
+            padding-top: 50px;
+            font-family: Times;
+        }
+
+        .filter-buttons {
+            position: relative;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        .filter-buttons ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            padding: 1rem;
+        }
+
+        .filter-buttons ul li {
+            list-style: none;
+            background: white;
+            padding: 12px 20px;
+            margin: 5px;
+            letter-spacing: 1px;
+            cursor: pointer;
+        }
+
+        .filter-buttons ul li.active {
+            background: red;
+            color: #fff;
+        }
+
+        .gallery {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 10px;
+            gap: 10px;
+        }
+
+        .gallery-Images {
+            height: 350px;
+            width: auto;
+            position: relative;
+        }
+
+        .gallery-Images img {
+            vertical-align: middle;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        .gallery-Images.hide {
+            display: none;
         }
