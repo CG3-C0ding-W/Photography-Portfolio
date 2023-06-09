@@ -166,3 +166,39 @@
         .gallery-Images.hide {
             display: none;
         }
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+  header {
+    height: 70vh;
+  }
+
+  .nav-area {
+    right: 25px;
+    margin-top: 20px;
+  }
+
+  .welcome-text {
+    width: 80%;
+    height: auto;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .welcome-text h1 {
+    font-size: 40px;
+  }
+
+  .gallery-section h1 {
+    font-size: 3rem;
+  }
+
+  .filter-buttons ul li {
+    padding: 8px 16px;
+    margin: 3px;
+  }
+
+  .gallery-Images {
+    height: 250px;
+  }
+}
