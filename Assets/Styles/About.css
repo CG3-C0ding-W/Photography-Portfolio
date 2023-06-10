@@ -1,8 +1,8 @@
-/* About.css */    
-    
-     /* General */
+ /* About.css */
 
-      * {
+        /* General */
+
+        * {
             margin: 0;
             padding: 0;
         }
@@ -24,7 +24,7 @@
 
         /* Nav Bar */
 
-        .wrapper{
+        .wrapper {
             width: 100%;
             height: 100%;
             margin: 0;
@@ -58,7 +58,7 @@
         }
 
         /* About Section */
-        
+
         .about-container {
             position: absolute;
             width: 100vw;
@@ -110,7 +110,7 @@
 
         form p {
             padding: 5px;
-            font-size: 1rem;
+            font-size: 1.3rem;
         }
 
         /* Gallery Section */
@@ -188,8 +188,8 @@
         .gallery-Images.hide {
             display: none;
         }
-        
-         @media (max-width: 768px) {
+
+        @media (max-width: 768px) {
             header {
                 height: 100vh;
             }
@@ -221,7 +221,13 @@
                 padding-bottom: 0;
             }
             .about-image img {
-                border-radius: 5px;
+                width: 50vw;
+                padding: 1rem;
+                border-radius: 2rem;
+            }
+            form p {
+                padding: 5px;
+                font-size: 1.1rem;
             }
             .gallery-section h1 {
                 font-size: 2rem;
