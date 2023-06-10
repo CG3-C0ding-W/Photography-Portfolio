@@ -1,8 +1,8 @@
-/* About.css */    
-    
-     /* General */
+ /* About.css */
 
-      * {
+        /* General */
+
+        * {
             margin: 0;
             padding: 0;
         }
@@ -24,7 +24,7 @@
 
         /* Nav Bar */
 
-        .wrapper{
+        .wrapper {
             width: 100%;
             height: 100%;
             margin: 0;
@@ -58,7 +58,7 @@
         }
 
         /* About Section */
-        
+
         .about-container {
             position: absolute;
             width: 100vw;
@@ -110,7 +110,7 @@
 
         form p {
             padding: 5px;
-            font-size: 1rem;
+            font-size: 1.3rem;
         }
 
         /* Gallery Section */
@@ -188,60 +188,57 @@
         .gallery-Images.hide {
             display: none;
         }
-        
-        @media (max-width: 768px) {
-  header {
-    height: 50vh;
-  }
 
-  .nav-area {
-    right: 20px;
-    margin-top: 20px;
-  }
-
-  .nav-area li a {
-    padding: 5px 10px;
-    font-size: 16px;
-  }
-
-  .about-container {
-    height: auto;
-    padding: 20px;
-  }
-
-  .about-form {
-    padding: 2vw 4vh;
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .about-content {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .about-text,
-  .about-image {
-    padding-right: 0;
-    padding-bottom: 20px;
-  }
-
-  .about-image img {
-    border-radius: 0;
-  }
-
-  .gallery-section h1 {
-    font-size: 2rem;
-    padding-top: 20px;
-  }
-
-  .filter-buttons ul li {
-    padding: 8px 15px;
-    margin: 3px;
-    font-size: 12px;
-  }
-
-  .gallery-Images {
-    height: 200px;
-  }
-}
+       @media (max-width: 768px) {
+            header {
+                height: 100vh;
+            }
+            .nav-area {
+                right: 20px;
+                margin-top: 20px;
+            }
+            .nav-area li a {
+                padding: 5px 10px;
+                font-size: 16px;
+            }
+            .about-container {
+                height: auto;
+                margin-top: 8rem;
+                padding: 10px 0px;
+            }
+            .about-form {
+                padding: 1vw 2vh;
+                width: 100%;
+                max-width: 80%;
+            }
+            .about-content {
+                flex-direction: column;
+                align-items: flex-wrap;
+            }
+            .about-text,
+            .about-image {
+                padding-right: 0;
+                padding-bottom: 0;
+            }
+            .about-image img {
+                width: 70vw;
+                padding: 0.4rem;
+                border-radius: 2rem;
+            }
+            form p {
+                padding: 5px;
+                font-size: 0.75rem;
+            }
+            .gallery-section h1 {
+                font-size: 2rem;
+                padding-top: 20px;
+            }
+            .filter-buttons ul li {
+                padding: 8px 15px;
+                margin: 3px;
+                font-size: 12px;
+            }
+            .gallery-Images {
+                height: 200px;
+            }
+        }
