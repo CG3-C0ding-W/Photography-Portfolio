@@ -9,26 +9,45 @@
     <title>Contact | G3Visuals</title>
     <link rel="stylesheet" href="Assets/Styles/Contact.css">
     <script src="contact.script.js " type="text/javascript "></script>
-    <script type="text/javascript " src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js "></script>
-    <script type="text/javascript ">
-        (function() {
-            emailjs.init("hPS1f-EKkRSpLM1Zb ");
-        })();
-    </script>
+    
 
     <!-- Place in separate script file -->
     <script>
-        function SendMail() {
-            var params = {
-                from_name: document.getElementById("fullName ").value,
-                email_id: document.getElementById("email_id ").value,
-                phone_number: document.getElementById("phone_Number ").value,
-                message: document.getElementById("message ").value
-            }
-            emailjs.send("service_hgo6ekq ", "template_y1sm6aq ", params).then(function(res) {
-                alert("Success! " + res.status);
+        const form = document.querySelector("form")
+        form.addEventListener("submit", (event) => {
+          // prevent the form submission from refreshing the page
+          event.preventDefault();
+        
+          // Use your API endpoint URL you copied from the previous step
+          const endpoint = "https://1i8bgk2qm4.execute-api.us-west-1.amazonaws.com/default/contactSubmission";
+          
+         // We use JSON.stringify here so the data can be sent as a string via HTTP
+            const body = JSON.stringify({
+            senderName: document.getElementById("fullName ").value.trim(),
+            senderPhone: document.getElementById("phone_Number ").value.trim(),
+            senderEmail: document.getElementById("email_id ").value.trim(),
+            message: document.getElementById("message ").value.trim()
+          });
+          
+          const requestOptions = {
+            method: "POST",
+            body
+          };
+        
+          fetch(endpoint, requestOptions)
+            .then((response) => {
+              if (!response.ok) throw new Error("Error in fetch");
+              return response.json();
             })
-        }
+            .then((response) => {
+              document.getElementById("result-text").innerText =
+                "Email sent successfully!";
+            })
+            .catch((error) => {
+              document.getElementById("result-text").innerText =
+                "An unknown error occurred.";
+            });
+        });
     </script>
 
 </head>
