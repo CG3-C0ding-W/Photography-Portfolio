@@ -107,6 +107,8 @@
               // prevent the form submission from refreshing the page
               event.preventDefault();
 
+              const { name, email, number, message } = event.target;
+
               const senderName = name.value;
               const senderEmail = email.value;
               const senderPhone = number.value;
