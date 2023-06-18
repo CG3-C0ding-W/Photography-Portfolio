@@ -29,7 +29,7 @@
                 <input type="text" id="fullName" placeholder="Your Name" required>
                 <input type="email" id="email_id" placeholder="Email" required>
                 <input type="text" id="phoneNumber" placeholder="Phone Number" required>
-                <textarea id="message" rows="4 " placeholder="Leave us a message"></textarea>
+                <textarea id="message" rows="4" placeholder="Leave us a message"></textarea>
                 <button type="submit">Submit</button>
                 <div>
                     <p id="result-text"></p>
@@ -44,30 +44,30 @@
         </div>
         <div class="filter-buttons ">
             <ul>
-                <li class="list active " data-filter="all">All</li>
-                <li class="list " data-filter="engagements">Engagements</li>
-                <li class="list " data-filter="celebrations">Celebrations</li>
-                <li class="list " data-filter="portraits">Portraits</li>
-                <li class="list " data-filter="street">Street</li>
-                <li class="list " data-filter="travel">Travel</li>
+                <li class="list active" data-filter="all">All</li>
+                <li class="list" data-filter="engagements">Engagements</li>
+                <li class="list" data-filter="celebrations">Celebrations</li>
+                <li class="list" data-filter="portraits">Portraits</li>
+                <li class="list" data-filter="street">Street</li>
+                <li class="list" data-filter="travel">Travel</li>
             </ul>
         </div>
         <div class="gallery ">
-            <div class="gallery-Images " data-item="engagements"><img src="Assets/gallery images/Engage_MG_1059.jpg" alt="alt " /></div>
-            <div class="gallery-Images " data-item="travel"><img src="Assets/gallery images/Beach_MG_2832.JPG" alt=" " /></div>
-            <div class="gallery-Images " data-item="street"><img src="Assets/gallery images/Car_MG_2575.jpg" alt=" " /></div>
-            <div class="gallery-Images " data-item="engagements"><img src="Assets/gallery images/Engage_MG_1165.jpg" alt=" " /></div>
-            <div class="gallery-Images " data-item="travel"><img src="Assets/gallery images/CTGStreet_MG_1764.jpg" alt=" " /></div>
-            <div class="gallery-Images " data-item="street"><img src="Assets/gallery images/LA_Skyline_MG_2667.jpg" alt=" " /></div>
-            <div class="gallery-Images " data-item="engagements "><img src="Assets/gallery images/Engage_MG_1545.jpg" alt=" " /></div>
-            <div class="gallery-Images " data-item="travel"><img src="Assets/gallery images/CTG_Pool_MG_2451.jpg" alt=" " /></div>
-            <div class="gallery-Images " data-item="street"><img src="Assets/gallery images/LA_Skyline_MG_2737.jpg" alt=" " /></div>
-            <div class="gallery-Images " data-item="engagements"><img src="Assets/gallery images/Engage_MG_1466.jpg" alt=" " /></div>
-            <div class="gallery-Images " data-item="travel"><img src="Assets/gallery images/CTG Bus_MG_1777.jpg" alt=" " /></div>
-            <div class="gallery-Images " data-item="street"><img src="Assets/gallery images/LA_Skyline_MG_2769.jpg" alt=" " /></div>
-            <div class="gallery-Images " data-item="engagements"><img src="Assets/gallery images/Engage_MG_1147.jpg" alt=" " /></div>
-            <div class="gallery-Images " data-item="street"><img src="Assets/gallery images/PurpleHaze_MG_2783.jpg" alt=" " /></div>
-            <div class="gallery-Images " data-item="engagements"><img src="Assets/gallery images/Engage_MG_1014.jpg" alt=" " /></div>
+            <div class="gallery-Images" data-item="engagements"><img src="Assets/gallery images/Engage_MG_1059.jpg" alt="alt " /></div>
+            <div class="gallery-Images" data-item="travel"><img src="Assets/gallery images/Beach_MG_2832.JPG" alt=" " /></div>
+            <div class="gallery-Images" data-item="street"><img src="Assets/gallery images/Car_MG_2575.jpg" alt=" " /></div>
+            <div class="gallery-Images" data-item="engagements"><img src="Assets/gallery images/Engage_MG_1165.jpg" alt=" " /></div>
+            <div class="gallery-Images" data-item="travel"><img src="Assets/gallery images/CTGStreet_MG_1764.jpg" alt=" " /></div>
+            <div class="gallery-Images" data-item="street"><img src="Assets/gallery images/LA_Skyline_MG_2667.jpg" alt=" " /></div>
+            <div class="gallery-Images" data-item="engagements"><img src="Assets/gallery images/Engage_MG_1545.jpg" alt=" " /></div>
+            <div class="gallery-Images" data-item="travel"><img src="Assets/gallery images/CTG_Pool_MG_2451.jpg" alt=" " /></div>
+            <div class="gallery-Images" data-item="street"><img src="Assets/gallery images/LA_Skyline_MG_2737.jpg" alt=" " /></div>
+            <div class="gallery-Images" data-item="engagements"><img src="Assets/gallery images/Engage_MG_1466.jpg" alt=" " /></div>
+            <div class="gallery-Images" data-item="travel"><img src="Assets/gallery images/CTG Bus_MG_1777.jpg" alt=" " /></div>
+            <div class="gallery-Images" data-item="street"><img src="Assets/gallery images/LA_Skyline_MG_2769.jpg" alt=" " /></div>
+            <div class="gallery-Images" data-item="engagements"><img src="Assets/gallery images/Engage_MG_1147.jpg" alt=" " /></div>
+            <div class="gallery-Images" data-item="street"><img src="Assets/gallery images/PurpleHaze_MG_2783.jpg" alt=" " /></div>
+            <div class="gallery-Images" data-item="engagements"><img src="Assets/gallery images/Engage_MG_1014.jpg" alt=" " /></div>
         </div>
     </section>
     <script>
@@ -134,8 +134,8 @@
                 .then((response) => {
                       document.getElementById("result-text").innerText =
                         "Email sent successfully!";
-                    }); 
-                catch((error) => {
+                    }) 
+                .catch((error) => {
                   document.getElementById("result-text").innerText =
                     "An unknown error occurred.";
                 });
