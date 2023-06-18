@@ -129,7 +129,7 @@
                   return response.json();
                 })
                 .then((response) => {
-                    if (response.status === 200) {
+                    if (response.status == 200) {
                       document.getElementById("result-text").innerText =
                         "Email sent successfully!";
                     } else throw new Error("Error in fetch")
