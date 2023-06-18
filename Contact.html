@@ -44,12 +44,12 @@
         </div>
         <div class="filter-buttons ">
             <ul>
-                <li class="list active " data-filter="all ">All</li>
-                <li class="list " data-filter="engagements ">Engagements</li>
-                <li class="list " data-filter="celebrations ">Celebrations</li>
-                <li class="list " data-filter="portraits ">Portraits</li>
-                <li class="list " data-filter="street ">Street</li>
-                <li class="list " data-filter="travel ">Travel</li>
+                <li class="list active " data-filter="all">All</li>
+                <li class="list " data-filter="engagements">Engagements</li>
+                <li class="list " data-filter="celebrations">Celebrations</li>
+                <li class="list " data-filter="portraits">Portraits</li>
+                <li class="list " data-filter="street">Street</li>
+                <li class="list " data-filter="travel">Travel</li>
             </ul>
         </div>
         <div class="gallery ">
@@ -129,8 +129,10 @@
                   return response.json();
                 })
                 .then((response) => {
-                  document.getElementById("result-text").innerText =
-                    "Email sent successfully!";
+                    if (response.status === 200) {
+                      document.getElementById("result-text").innerText =
+                        "Email sent successfully!";
+                    } else throw new Error("Error in fetch")
                 })
                 .catch((error) => {
                   document.getElementById("result-text").innerText =
