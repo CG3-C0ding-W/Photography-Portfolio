@@ -107,8 +107,8 @@
               // prevent the form submission from refreshing the page
               event.preventDefault();
 
-              const fullNameField = document.getElementById("fullName");
-              console.log(fullNameField.value);
+              const fullNameField = document.getElementById("fullName").value;
+              console.log(fullNameField);
             
               // Use your API endpoint URL you copied from the previous step
               const endpoint = "https://uivqggjsuj.execute-api.us-west-1.amazonaws.com/default/contactSubmission";
@@ -140,7 +140,7 @@
                     "An unknown error occurred.";
                 });
             });
-        });
+    
     </script>
 
 </body>
